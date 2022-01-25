@@ -1,0 +1,162 @@
+html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+body{
+    font-family: 'Space Mono', monospace;
+    background-color: #363636;
+    color: #FFFFFF;
+}
+.container-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container-title .text{
+    font-size: 1.2rem;
+    color: yellowgreen;
+}
+.container-boxes{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.col{
+	flex-basis: 200px;
+    padding: 1rem;
+    margin: 1rem;
+    /*border: 1px solid #E5E5E5;*/
+    box-shadow:  20px 20px 60px #2e2e2e,
+                -20px -20px 60px #3e3e3e;
+    border-radius: 0.5rem;
+    background-color: #242F40;
+}
+.col input[type = text]{
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    height: 2.5rem;
+    border: 1px #242F40;
+    background-color: #E5E5E5;
+    border-radius: 0.3rem;
+}
+.col input[type=text]:focus{
+    outline: rebeccapurple;
+    outline-style: solid;
+    outline-width: 0.2rem;
+    border: 1px #E5E5E5;
+}
+.col textarea{
+    resize: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    background-color: #E5E5E5;
+    font-size: 1.5rem;
+}
+.col textarea:focus{
+    outline: rebeccapurple;
+    outline-style: solid;
+    outline-width: 0.2rem;    
+}
+.col:nth-child(1), .col:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: space-around;
+}
+.container-buttons{
+    display: flex;
+    align-self: flex-end;
+    margin-top: 1rem;
+    gap: 0.5rem;
+}
+.col:nth-child(2) button{
+    margin-top: 1rem;
+    align-self: end;
+    width: 5rem;
+    text-align: right;
+    background: url('../img/copy.svg');
+    background-repeat: no-repeat;
+    background-size: 1.5rem;
+    background-position: 10% 50%;
+}
+.container-boxes .col:nth-child(1) button{
+    padding: 0.4rem;
+    border: 0rem;
+    border-radius: 0.3rem;
+}
+.container-boxes .col:nth-child(1) button:hover, .container-boxes .col:nth-child(1) button:focus{
+    cursor: pointer;
+    outline: #E5E5E5;
+    outline-style: solid;
+    outline-width: 0.2rem;
+    color: #E5E5E5;
+    font-weight: bold;
+    background-color: #CCA43B;
+}
+.container-boxes .col:nth-child(2) button{
+    padding: 0.4rem;
+    border: 0rem;
+    border-radius: 0.3rem;
+    background-color: #CCA43B;
+    color: #E5E5E5;
+}
+.container-boxes .col:nth-child(2) button:hover, .container-boxes .col:nth-child(2) button:focus{
+    cursor: pointer;
+    outline: #CCA43B;
+    outline-style: solid;
+    outline-width: 0.2rem;
+    color: #242F40;
+    font-weight: bold;
+    background-color: #FFFFFF;
+}
+.container-boxes .col:nth-child(1) button:active, .container-boxes .col:nth-child(2) button:active{
+    font-weight: normal;
+}
+footer{
+    display: flex;
+    margin-top: auto;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+footer a{
+    color: #E5E5E5;
+    text-decoration: none;
+}
+footer a:hover{
+    color: #CCA43B;
+    font-weight: bolder;
+}
+footer a:hover + svg{
+    fill: #CCA43B !important;
+    transform: rotate( 360deg );
+}
+footer p{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+footer svg{
+    height: 2.3rem;
+    margin-left: -0.3rem;
+    transition: transform 0.7s ease-in-out;
+}
+/**Small devices (landscape phones, 375px and up)*/
+@media (min-width: 375px) {
+    .col textarea{
+        height: 6rem;
+    }
+}
+/* X-Small devices (portrait phones, less than 375px)*/
+@media (max-width: 374.98px) {
+    .col input, .col textarea{
+        width: 16rem;
+    }
+    .col textarea{
+        height: 10rem;
+    }
+    .text{
+        text-align: center;
+    }
+
+ }
