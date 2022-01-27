@@ -89,8 +89,6 @@ document.addEventListener("DOMContentLoaded", function () {
     buttonClearAll.addEventListener('click', function(){
         let textSpan = document.querySelector('.col:nth-child(2) button:nth-child(1) span');
         if (textInput.value.length > 0 && result.value.length || textInput.value.length > 0 || result.value.length > 0 ){
-            //listResults.style.transition = '0.3s ease-out';
-            //listResults.style.opacity = 0;
             listResults.innerHTML += '<li class="item-list">'+result.value+'</li>';
             textInput.value = '';
             result.value = '';
