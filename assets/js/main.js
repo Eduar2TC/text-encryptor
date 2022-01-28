@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 itemList.style.opacity = 1;
                 buttonClearAll.style.width = '5.5rem';
                 textSpan.innerHTML = 'Clear';
-            }, 1000);
+            }, 600);
         }else{
             textInput.focus();
             textInput.style.outlineColor = 'indianred';
