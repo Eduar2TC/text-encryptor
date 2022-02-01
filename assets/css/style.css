@@ -1,11 +1,3 @@
-:root {
-  /*sunny side */
-  --blue-background: blue;
-  /*dark side */
-  /*general */
-  --white: #fff;
-}
-
 html, body {
   height: 100%;
   display: flex;
@@ -34,21 +26,20 @@ body{
 	flex-basis: 200px;
     padding: 1rem;
     margin: 1rem;
+    /*border: 1px solid #E5E5E5;*/
+    box-shadow:  20px 20px 60px #2e2e2e,
+                -20px -20px 60px #3e3e3e;
     border-radius: 0.5rem;
-    background: #363636;
-    box-shadow:  5px 5px 4px #2d2d2d,
-                -5px -5px 4px #3f3f3f;
+    background-color: #242F40;
     max-height: 13rem;
 }
 .col input[type = text]{
     padding: 0.5rem;
     font-size: 1.5rem;
     height: 2.5rem;
-    border: 1px transparent;
-    /*Neumorphism input*/
+    border: 1px #242F40;
+    background-color: #E5E5E5;
     border-radius: 0.3rem;
-    background: #E5E5E5;
-    box-shadow: inset 4px 4px 6px #5c5c5c, inset -4px -4px 6px #ffffff;
 }
 .col input[type=text]:focus{
     outline: rebeccapurple;
@@ -58,13 +49,10 @@ body{
 }
 .col textarea{
     resize: none;
-    border-radius: 0.3rem;
+    border-radius: 0.5rem;
     padding: 0.5rem;
-    border: 1px transparent;
+    background-color: #E5E5E5;
     font-size: 1.5rem;
-    /*Neumorphism area*/
-    background: #E5E5E5;
-    box-shadow: -2px -2px 0px #c5c5c5, 2px 2px 0px #ffffff70;
 }
 .col textarea:focus{
     outline: rebeccapurple;
@@ -92,9 +80,7 @@ body{
     padding: 0.4rem;
     border: 0rem;
     border-radius: 0.3rem;
-    /*Neumorphism button*/
     background-color: #CCA43B;
-    box-shadow:  2px 2px 0px #a78630, -1px -1px 0px #f1c246;
     color: #E5E5E5;
 }
 .col:nth-child(2) button svg{
@@ -105,29 +91,25 @@ body{
     padding: 0.4rem;
     border: 0rem;
     border-radius: 0.3rem;
-    /*Neumorphism button*/
-    background: #E5E5E5;
-    box-shadow: 2px 2px 0px #bcbcbc, -1px -1px 0px #ffffff;
-    color: #242F40;
 }
 .col:nth-child(1) button:hover, .col:nth-child(1) button:focus{
     cursor: pointer;
-    font-weight: bold;
+    outline: #E5E5E5;
+    outline-style: solid;
+    outline-width: 0.2rem;
     color: #E5E5E5;
-    /*Neumorphism buttons*/
+    font-weight: bold;
     background-color: #CCA43B;
-    box-shadow:  2px 2px 0px #a78630, -1px -1px 0px #f1c246; 
-    /*background: linear-gradient(315deg, #b89435, #daaf3f);
-    box-shadow:  -1px -1px 1px #a78630, 1px 1px 1px #f1c246;*/
 }
 /*Hover buttons*/
 .col:nth-child(2) button:hover, .col:nth-child(2) button:focus{
     cursor: pointer;
-    font-weight: bold;
-    /*Neumorphism buttons*/
-    background: #E5E5E5;
-    box-shadow: 2px 2px 0px #bcbcbc, -1px -1px 0px #ffffff;
+    outline: #CCA43B;
+    outline-style: solid;
+    outline-width: 0.2rem;
     color: #242F40;
+    font-weight: bold;
+    background-color: #FFFFFF;
 }
 /*Hover and focus buttons */
 .col:nth-child(2) button:hover svg, .col:nth-child(2) button:focus svg{
@@ -142,7 +124,7 @@ body{
 }
 /*Order list*/
 .col:nth-child(3) ol{
-    padding-left: 0rem;
+    padding-left: 0.5rem;
     overflow-y: auto;
     min-height: 3rem;
     max-height: 10rem;
@@ -164,7 +146,7 @@ body{
   width: 0.5rem;
   height: 0.5rem;
   margin-right: 1rem;
-  background: #242F40;
+  background: #363636;
   color: #E5E5E5;
   border-radius: 50%;
   display: flex;
@@ -252,93 +234,3 @@ footer svg{
     }
 
  }
-
-.toggle-container{
-    position: absolute;
-    right: 5rem;
-    top: 2rem;
-}
-#toggle_checkbox{
-    display: none;
-}
-label{
-    display: block;
-    width: 3rem;
-    height: 1.5rem;
-    margin: 0 auto;
-    background-color: cadetblue;
-    border-radius: 1rem;
-    transform: translate(-50%);
-    cursor: pointer;
-    transition: 0.3s ease background-color;
-    overflow: hidden;
-}
-.star-container{ /*Container star*/
-    position: absolute;
-    right: 1.41rem;
-    top: 0rem;
-    height: 1.5rem;
-    width: 1.5rem;
-    background-color: gold;
-    transform:scale(1);
-    border-radius: 50%;
-    transition: 0.3s ease top, 0.3s ease left, 0.3s ease transform, 0.3s ease background-color;
-    z-index: 1;
-}
-.star-container .star:nth-child(1){
-    position: relative;
-}
-.star-container .star:nth-child(2){
-    position: absolute;
-    transform: translatez( 36deg );
-}
-.star{
-    font-size: 1.5rem;
-    top: -0.06rem;
-    left: 0.05rem;
-    color: white;
-    transition: 0.3s ease color;
-}
-.moon{
-    position: absolute;
-    bottom: -2rem;
-    right: 0.2rem;
-    width: 1.5rem;
-    height: 1.5rem;
-    background-color: white;
-    border-radius: 50%;
-    transition: 0.3s ease bottom;
-}
-.moon::before{
-    content: '';
-    position: absolute;
-    top: -0.1rem;
-    left: 0.45rem;
-    width: 1.5rem;
-    height: 1.5rem;
-    background-color: red;
-    border-radius: 50%;
-    transition: 0.3s ease background-color;
-}
-#toggle_checkbox:checked + label {
-  background-color: #242F40;
-}
-
-#toggle_checkbox:checked + label .star-container {
-  top: 0rem;
-  left: 1.5rem;
-  transform: scale(0.25);
-  background-color: lightyellow;
-}
-#toggle_checkbox:checked + label .star-container .star {
-  color: yellow;
-}
-#toggle_checkbox:checked + label .moon {
-  bottom: 0rem;
-}
-#toggle_checkbox:checked + label .moon:before {
-  background-color: #242F40;
-}
-.toggle-container:checked ~ body {
-  background-color: var(--blue-background);
-}
