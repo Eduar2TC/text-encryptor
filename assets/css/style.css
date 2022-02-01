@@ -1,11 +1,3 @@
-:root {
-  /*sunny side */
-  --blue-background: blue;
-  /*dark side */
-  /*general */
-  --white: #fff;
-}
-
 html, body {
   height: 100%;
   display: flex;
